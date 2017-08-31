@@ -55,7 +55,6 @@ public class UserLoginController {
 		u.setPassword(MD5Util.MD5EncodeUtf8(u.getPassword()));
 		List<User> ul=us.select(u);
 		if(ul.size()!=0){
-			
 			return "false";
 		}else{
 			us.register(u);
