@@ -36,7 +36,6 @@ public class VideoServiceImpl implements VideoService {
 		sv.setCurrentpage((currentpage-1)*10);
 		sv.setSpeakerid(searchspeakerId);
 		sv.setTitle(searchvideoTitle);
-		System.out.println(sv.getCourseid()+"-----");
 		return vm.findterm(sv);
 	}
 	@Override
@@ -55,17 +54,14 @@ public class VideoServiceImpl implements VideoService {
 	}
 	@Override
 	public int updatevideo(Video video) {
-		// TODO Auto-generated method stub
 		return vm.updateByPrimaryKeySelective(video);
 	}
 	@Override
 	public void batch(String id) {
-		// TODO Auto-generated method stub
 		vm.batch(id);
 	}
 	@Override
 	public List<CourseWarp> avgtimes() {
-		// TODO Auto-generated method stub
 		return vm.avgcourse();
 	}
 	
