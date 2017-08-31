@@ -66,7 +66,7 @@ public class VideoController {
 		videolist=vs.findterm(searchvideoTitle,searchcourseId,searchspeakerId,page.getPage());
 		page.setSize(10);
 		page.setRows(videolist);
-		page.setTotal(count);
+		page.setTotal(count); 
 		mv.addObject("searchvideoTitle", searchvideoTitle);
 		mv.addObject("searchcourseId", searchcourseId);
 		mv.addObject("searchspeakerId", searchspeakerId);
